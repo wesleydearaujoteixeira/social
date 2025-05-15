@@ -76,7 +76,7 @@ export default function Layout({ children }: Props) {
                             />
                         </Link>
 
-                        <Link href={`usuarios/${localStorage.getItem("id-usuario")}`}>
+                        <Link href={`/usuarios/${localStorage.getItem("id-usuario")}`}>
                             <NavItem
                                 icon={faUser}
                                 label="Meu perfilll"
