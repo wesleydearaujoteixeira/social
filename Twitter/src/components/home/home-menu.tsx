@@ -79,10 +79,13 @@ const [notification, setNotification] = useState<Notificacao[]>([]);
                     icon={faHouse}
                     label="Página inicial"
                 />
-                <NavItem
-                    icon={faUser}
-                    label="Meu perfil"
-                />
+                <Link href={`/edit`}>
+                    <NavItem
+                        icon={faUser}
+                        label="Meu perfil"
+                    />                
+                </Link>
+             
                 <Link href="/notificacoes" className="relative">
                     <NavItem
                         icon={faBell}
