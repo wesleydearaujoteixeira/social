@@ -79,7 +79,7 @@ export default function Layout({ children }: Props) {
                         <Link href={`usuarios/${localStorage.getItem("id-usuario")}`}>
                             <NavItem
                                 icon={faUser}
-                                label="Meu perfil"
+                                label="Meu perfilll"
                             />
                         </Link>
 
