@@ -20,6 +20,11 @@ export default function Layout({ children }: Props) {
 
 
       const [notification, setNotification] = useState<Notificacao[]>([]);
+
+
+      const [idUser, setUserId] = useState<string>();
+
+
     
 
 
@@ -35,6 +40,7 @@ export default function Layout({ children }: Props) {
           console.log("Token incorreto, ou usuário incorreto");
           return;
         }
+        setUserId(userId);
     
     
         const FetchNotifications = async () => {
@@ -76,12 +82,13 @@ export default function Layout({ children }: Props) {
                             />
                         </Link>
 
-                        <Link href={`/usuarios/${localStorage.getItem("id-usuario")}`}>
+                        <Link href={`/usuarios/${idUser}`}>
                             <NavItem
                                 icon={faUser}
                                 label="Meu perfilll"
                             />
                         </Link>
+
 
 
                         <Link href="/notificacoes" className="relative flex items-center">
